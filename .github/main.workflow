@@ -23,7 +23,10 @@ action "Publish Filter" {
 action "Docker Login" {
   needs = ["Publish Filter"]
   uses = "actions/docker/login@master"
-  secrets = ["DOCKER_USERNAME", "DOCKER_PASSWORD"]
+  secrets = [
+    "DOCKER_PASSWORD",
+    "DOCKER_USERNAME",
+  ]
 }
 
 action "Docker Publish" {
