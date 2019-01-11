@@ -9,6 +9,7 @@ LABEL com.github.actions.name="GitHub Action for lerna"
 LABEL com.github.actions.description="Wraps the lerna CLI to enable common lerna commands."
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="black"
+COPY LICENSE.md README.md /
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
